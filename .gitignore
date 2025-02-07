@@ -1,0 +1,51 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+/static/
+media/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Mac
+.DS_Store
+
+# Environment Files
+.env
+*.env
+
+# Virtual Environment
+venv/
+venv/*
+
+# Ignore .egg-info and dist folders
+*.egg-info
+dist/
+build/
+
+# Ignore test and coverage directories
+*.coverage
+.coverage.*
+nosetests.xml
+pytest.xml
+*.cover
+*.hypothesis/
+
+# Bootstrap / Frontend files (only if you don't need to track them)
+node_modules/
