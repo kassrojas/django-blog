@@ -1,6 +1,18 @@
+# Django Blog Application
+
+This is a simple blog application built with **Django**, **Python**, and Bootstrap. It provides users with a clean and responsive interface to browse blog posts, featuring:
+
+- A mobile-responsive navigation bar
+- A paginated list of blog posts
+- A featured post section
+- User authentication: Sign up, Sign in, and Sign out
+- The ability to like posts
+
+The application is styled using Bootstrap and is designed to be user-friendly on both desktop and mobile devices.
+
 ![App Screenshot](assets/screenshot.png)
 
-To run locally
+## To run locally
 
 1. First clone this repo:
    `git clone git@github.com:kassrojas/django-blog.git`
