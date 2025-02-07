@@ -1,3 +1,5 @@
+![App Screenshot](assets/screenshot.png)
+
 To run locally
 
 1. First clone this repo:
