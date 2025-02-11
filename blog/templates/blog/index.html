@@ -10,6 +10,8 @@
         </div>
     </div>
 
+    {% if object_list %}
+
     {% for post in object_list %}
     <div class="row">
         <div class="col-md-6 col-11 mx-auto my-3">
@@ -37,6 +39,25 @@
     </div>
     {% endfor %}
 
+    {% else %}
+    <div class="row">
+        <div class="col-4 mx-auto mt-5">
+            <div class="card">
+                <section class="card-body">
+                    <p class="card-title font-italic">
+                        No blogs available at the moment.
+                        <br>
+                        <a href="/admin" class="card-subtitlefont-weight-bold">
+                            Visit the admin panel to add a new post
+                        </a>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if page_range > 0 %}
     <nav>
         <ul class="pagination justify-content-center mt-5">
             {% if page_obj.has_previous %}
@@ -68,6 +89,7 @@
                 {% endif %}
         </ul>
     </nav>
+    {% endif %}
 </div>
 
 {% endblock content %}

@@ -33,6 +33,8 @@ ehthumbs.db
 # Virtual Environment
 venv/
 venv/*
+env/
+env/*
 
 # Ignore .egg-info and dist folders
 *.egg-info
