@@ -1,7 +1,8 @@
 # blog/views.py
 from django.shortcuts import redirect
 from django.views import View
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, DeleteView
 from .models import BlogPost
 
 class Index(ListView):
@@ -53,7 +54,7 @@ class BlogDetailsView(DetailView):
 
 
 class LikeBlogPost(View):
-    def post(self, request, pk):
+   def post(self, request, pk):
       blog_post = BlogPost.objects.get(id=pk)
       if blog_post.likes.filter(pk=self.request.user.id).exists():
          blog_post.likes.remove(request.user.id)
@@ -61,3 +62,12 @@ class LikeBlogPost(View):
          blog_post.likes.add(request.user.id)
       blog_post.save()
       return redirect('blog_details', pk)
+
+
+class DeletePostView(DeleteView):
+   model = BlogPost
+   template_name = 'blog/delete_post.html'
+   success_url = reverse_lazy('index')
+
+   def get(self, request, *args, **kwargs):
+      return self.post(request, *args, **kwargs)
