@@ -1,3 +1,4 @@
+# blog/urls.py
 from django.urls import path, include
 from .views import Index, BlogDetailsView, LikeBlogPost, Featured, DeletePostView
 
